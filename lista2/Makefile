@@ -31,15 +31,24 @@ zad4:
 	gcc lex.yy.c -o zad4 -lfl
 	./zad4 cases/test4.txt
 
-run2: zad2
+run2: 
+	flex zad2.l
+	gcc lex.yy.c -o zad2 -lfl
+	./zad2 < cases/test2.adb > test2results.adb
 	gnatmake test2results.adb
 	./test2results
 	
-run3: zad3
+run3: 
+	flex zad3.l
+	gcc lex.yy.c -o zad3 -lfl
+	./zad3 < cases/test3.cpp > test3results.cpp
 	g++ -Icases/include -o test3results test3results.cpp
 	./test3results
 	
-run3_docs: zad3_docs
+run3_docs: 
+	flex zad3.l
+	gcc lex.yy.c -o zad3 -lfl
+	./zad3 DOCS=1 < cases/test3.cpp > test3results.cpp
 	g++ -Icases/include -o test3results test3results.cpp
 	./test3results
 
