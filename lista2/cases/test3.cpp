@@ -21,6 +21,9 @@
 //*
 //*/
 
+ // 
+int q;
+
 // Comment\
 void nuke(void);
 
@@ -36,6 +39,9 @@ int/**/f(){return 42;}
 int main(void) {
     // > 1
     std::cout << TEST << "\n";
+
+    printf("/* foo bar");
+    //*/" bar();
 
     // > /* is great */ and so is //
     std::cout << "/* is great */"

@@ -11,10 +11,10 @@ int wordsCount = 0;
 %}
 
 %%
-^[[:blank:]]*\n 						/*usuwanie pustych linii*/
-[[:blank:]]+         { printf(" "); }				/*zastępowanie ciągu białych znaków pojedynczą spacją*/
-[^ \t\n]+            { printf("%s", yytext); wordsCount++; }	/*wypisywanie słowa i zwiększenie licznika słów*/
-\n                   { printf("\n"); linesCount++; }		/*wypisywanie nowej linii i zwiększenie licznika linii*/
+^[[:blank:]]*\n
+[[:blank:]]+         { printf(" "); }
+[^ \t\n]+            { printf("%s", yytext); wordsCount++; }
+\n                   { printf("\n"); linesCount++; }
 %%
 
 int yywrap() {
