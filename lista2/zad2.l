@@ -1,18 +1,16 @@
-/*Kinga Majcher 272354*/
+/* Kinga Majcher 272354 */
 
 %{
 #include <stdio.h>
 int yywrap();
 %}
 
-%x BRACKET
 %x COMMENT
 
 %%
 
-\(                      { ECHO; BEGIN(BRACKET); }
-<BRACKET>\)             { ECHO; BEGIN(INITIAL); }
-<BRACKET>.              { ECHO; }
+\"[^"\n]*\" 			{ ECHO; }
+
 
 ^[[:blank:]]*--.*\n     ; 
 (^|[[:space:]]?)--      { BEGIN(COMMENT); }

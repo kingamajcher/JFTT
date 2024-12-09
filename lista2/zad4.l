@@ -136,7 +136,7 @@ int main(int argc, char *argv[]) {
     while (fgets(line, sizeof(line), file)) {
         printf("%s", line);
         
-        top = -1; // Resetowanie stosu przed każdym nowym działaniem
+        top = -1;
         error_handled = 0;
         yy_scan_string(line);  
         yylex(); 

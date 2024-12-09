@@ -1,4 +1,4 @@
-/* Kinga Majcher 272354*/
+/* Kinga Majcher 272354 */
 
 %{
     #include <stdio.h>

@@ -6,7 +6,7 @@ begin -- Preserve things befor this
     Put_Line ("=== Ada ===");
     --This will be removed
     -- With space too
-    Put_Line ("--- Not a comment ---");
+    Put_Line ("--- Not a comment ---");--bvuygbh"
     --- Three work as well
     -- -- As does commenting twice
 
